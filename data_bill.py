@@ -23,3 +23,18 @@ premium_user = input("Please tell me if you a premium account holder (yes or no)
 # Boolean for premium
 
 has_premium = premium_user == 'yes' or 'Yes'
+
+# Logic to determine their charges
+
+overage_gb = monthly_data_useage - TIER_1_DATA_LIMIT_GB
+overage_rate = 
+
+if has_premium:
+    if monthly_data_useage >= TIER_2_DATA_LIMIT_GB:
+        overage_cost = overage_gb * PREMIUM_USER_OVERAGE_RATE_TIER_3
+        total = base_plan_cost + overage_cost
+        overage_rate = PREMIUM_USER_OVERAGE_RATE_TIER_3
+    elif monthly_data_useage < TIER_2_DATA_LIMIT_GB and monthly_data_useage >= TIER_1_DATA_LIMIT_GB:
+        overage_cost = overage_gb * PREMIUM_USER_OVERAGE_RATE_TIER_2
+        total = base_plan_cost + overage_cost
+        overage_rate = PREMIUM_USER_OVERAGE_RATE_TIER_3
