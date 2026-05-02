@@ -20,3 +20,6 @@ monthly_data_useage = float(input("Please tell me how much data you have used si
 base_plan_cost = float(input("Please tell me the cost of you plan per month: "))
 premium_user = input("Please tell me if you a premium account holder (yes or no): ")
 
+# Boolean for premium
+
+has_premium = premium_user == 'yes' or 'Yes'
