@@ -40,3 +40,14 @@ if has_premium:
         overage_rate = PREMIUM_USER_OVERAGE_RATE_TIER_3
     else:
         total = base_plan_cost
+else:
+    if monthly_data_useage >= TIER_2_DATA_LIMIT_GB:
+        overage_cost = overage_gb * REGULAR_USER_OVERAGE_RATE_TIER_3
+        total = base_plan_cost + overage_cost
+        overage_rate = REGULAR_USER_OVERAGE_RATE_TIER_3
+    elif monthly_data_useage < TIER_2_DATA_LIMIT_GB and monthly_data_useage >= TIER_1_DATA_LIMIT_GB:
+        overage_cost = overage_gb * REGULAR_USER_OVERAGE_RATE_TIER_2
+        total = base_plan_cost + overage_cost
+        overage_rate = REGULAR_USER_OVERAGE_RATE_TIER_2
+    else:
+        total = base_plan_cost
