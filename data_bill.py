@@ -27,7 +27,7 @@ has_premium = premium_user == 'yes' or 'Yes'
 # Logic to determine their charges
 
 overage_gb = monthly_data_useage - TIER_1_DATA_LIMIT_GB
-overage_rate = 
+overage_rate = ''
 
 if has_premium:
     if monthly_data_useage >= TIER_2_DATA_LIMIT_GB:
