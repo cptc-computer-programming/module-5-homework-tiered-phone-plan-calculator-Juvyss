@@ -51,3 +51,14 @@ else:
         overage_rate = REGULAR_USER_OVERAGE_RATE_TIER_2
     else:
         total = base_plan_cost
+
+# Our Print Statement
+
+if monthly_data_useage > TIER_1_DATA_LIMIT_GB:
+    print("You are over your limit by ", overage_gb, " GB.")
+    print("Overage rate: $", format(overage_rate, ".02f"), sep = ' ')
+    print("Overage cost: $", format(overage_cost, ".02f"), sep = ' ')
+    print("Your total bill is $", format(total, ".02f"), sep = ' ')
+else:
+    print("You are within your data limit.")
+    print("Your total bill is $", format(total, ".02f"), sep = ' ')
