@@ -7,4 +7,16 @@ PREMIUM_USER_OVERAGE_RATE_TIER_3 = 2
 REGULAR_USER_OVERAGE_RATE_TIER_3 = 3
 
 
+
 # Your code goes here:
+
+# Welcome message
+
+print("Hi! I am data_bill, I will calculate your phone bill for you. Please respond to prompts below:")
+
+# User Inputs
+
+monthly_data_useage = float(input("Please tell me how much data you have used since your last billing cycle (GB): "))
+base_plan_cost = float(input("Please tell me the cost of you plan per month: "))
+premium_user = input("Please tell me if you a premium account holder (yes or no): ")
+
